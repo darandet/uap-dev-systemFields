@@ -1,0 +1,15 @@
+{
+  "welcomeFile": "/index.html",
+  "routes": [
+	{
+      "source": "^\/(?!odata)(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+  	},
+	{
+	  "source": "^\/odata\/SystemFields\/(.*)$",
+	  "target": "/sap/opu/odata/SAP/ZTATOSOV_SYSTEM_FIELDS_SRV/$1",
+	  "destination": "S4H100-CF-UAP-BASIC"
+	}
+  ]
+}

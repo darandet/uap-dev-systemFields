@@ -1,0 +1,35 @@
+ID: systemFields
+_schema-version: 3.2.0
+description: SAPUI5 Application to output System Fields
+version: 0.0.1
+
+modules:
+ - name: systemFields
+   type: nodejs
+   path: approuter
+   build-parameters:
+     builder: custom
+     commands:
+       - npm install
+       - npm run build:ui --prefix ..
+   parameters:
+      disk-quota: 512M
+      memory: 512M
+   requires:
+      - name: connectivity
+      - name: destination
+      - name: xsuaa
+
+resources:
+ - name: connectivity
+   type: org.cloudfoundry.existing-service
+   parameters:
+     service-name: system-fields-connectivity
+ - name: destination
+   type: org.cloudfoundry.existing-service
+   parameters:
+     service-name: system-fields-destination
+ - name: xsuaa
+   type: org.cloudfoundry.existing-service
+   parameters:
+     service-name: system-fields-xsuaa

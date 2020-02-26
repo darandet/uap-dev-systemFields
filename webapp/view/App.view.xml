@@ -1,0 +1,16 @@
+ <mvc:View controllerName="uap.dev.systemFields.controller.App"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Text text="{oData>/Z_C_TATOSOV_SYSTEM_DATA/SystemClient}"/>
+					<Text text="{oData>/Z_C_TATOSOV_SYSTEM_DATA/SessionUser}"/>
+					<Text text="{oData>/Z_C_TATOSOV_SYSTEM_DATA/SystemId}"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
